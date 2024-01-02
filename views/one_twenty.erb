@@ -1,3 +1,25 @@
 <h1>1d20</h1>
 
-<p>You rolled a <%= @dice %>.</p>
+<ul>
+  <%if @dice === 1%>
+    <li style="color:red">
+      <%= @dice%>
+    </li>
+  <%elsif @dice === 20%>
+    <li style="color:green">
+      <%= @dice%>
+    </li>
+  <%else%>
+    <li>
+      <%= @dice%>
+    </li>
+  <%end%>
+</ul>
+<!---->
+<%# if @dice === 1 %>
+<!--  <p style="color: red"><%#= @outcome %>.</p>-->
+<%# elsif @dice === 20 %>
+<!--  <p style="color: green"><%#= @outcome %>.</p>-->
+<%# else %>
+<!--  <p><%#= @outcome %>.</p>-->
+<%# end %>
